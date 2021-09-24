@@ -21,14 +21,14 @@ public class TransactionController
     }
 
     @DeleteMapping("{transactionId}")
-    public ResponseEntity<?> deleteTransaction(@RequestParam Long transactionId)
+    public ResponseEntity<?> deleteTransaction(@PathVariable Long transactionId)
     {
         transactionService.deleteTransaction(transactionId);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping("{userId}")
-    public ResponseEntity<?> getAllUserTransaction(@RequestParam Long userId)
+    public ResponseEntity<?> getAllUserTransaction(@PathVariable Long userId)
     {
         return ResponseEntity.ok(transactionService.findAllUserTransaction(userId));
     }
