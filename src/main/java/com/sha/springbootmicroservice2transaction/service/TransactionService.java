@@ -33,9 +33,9 @@ public class TransactionService implements ITransactionService
         return transactionRepository.findAllByUserId(userId);
     }
 
-//    @Override
-//    public List<Transaction> findAllTransactionOnDate(Long date)
-//    {
-//
-//    }
+	@Override
+	public List<Transaction> getAllTransaction()
+	{
+		return transactionRepository.findAll();
+	}
 }

@@ -11,4 +11,6 @@ public interface ITransactionService
     void deleteTransaction(Long transactionId);
 
     List<Transaction> findAllUserTransaction(Long userId);
+	
+	List<Transaction> getAllTransaction();
 }

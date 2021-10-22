@@ -32,4 +32,10 @@ public class TransactionController
     {
         return ResponseEntity.ok(transactionService.findAllUserTransaction(userId));
     }
+	
+	@GetMapping
+	public ResponseEntity<?> getAllTransaction()
+	{
+		return ResponseEntity.ok(transactionService.getAllTransaction());
+	}
 }
