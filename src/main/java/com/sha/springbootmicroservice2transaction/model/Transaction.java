@@ -19,6 +19,9 @@ public class Transaction
 
     @Column(name="product_id",nullable=false)
     private Long productId;
+	
+	@Column(name="user_review",nullable=true)
+	private Long userReview;
 
     @Column(name="transaction_time")
     private LocalDateTime transactionTime;
